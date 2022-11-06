@@ -23,6 +23,7 @@ function sendMail(data){
     var template = HtmlService.createTemplateFromFile(TEMPLATE);
     template.nama=data.nama;
     template.uniqueid = data.id;
+    template.deployment_id = DEPLOYMENT_ID;
     var message = template.evaluate().getContent();
 
     GmailApp.sendEmail(
