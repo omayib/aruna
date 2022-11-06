@@ -8,7 +8,7 @@ The complete tutorial i have explained on [Medium](https://akbarul.medium.com/ca
 
 > Lets drive our organization by data, data and data.
 
-##License
+## MIT License
 ---
 
 Copyright 2022 ARIF AKBARUL HUDA
