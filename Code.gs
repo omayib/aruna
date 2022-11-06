@@ -20,7 +20,6 @@ function sendMail(data){
     if(MailApp.getRemainingDailyQuota()==0)
       return false;
     
-    var file = DriveApp.getFileById(FILE_ID);
     var template = HtmlService.createTemplateFromFile(TEMPLATE);
     template.nama=data.dosen;
     template.uniqueid = data.id;
@@ -28,7 +27,7 @@ function sendMail(data){
 
     GmailApp.sendEmail(
         data.email, SUBJECT, '',
-        {htmlBody: message, name: SENDER_NAME, attachments: [file.getAs(MimeType.PDF)]}
+        {htmlBody: message, name: SENDER_NAME}
       );
     return true;
 }
