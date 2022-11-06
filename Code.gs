@@ -21,7 +21,7 @@ function sendMail(data){
       return false;
     
     var template = HtmlService.createTemplateFromFile(TEMPLATE);
-    template.nama=data.dosen;
+    template.nama=data.nama;
     template.uniqueid = data.id;
     var message = template.evaluate().getContent();
 
